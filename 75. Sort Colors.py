@@ -1,11 +1,16 @@
-nums =[2,0,2,1,1,0]
-sum=[]
-temp=[]
-for i in range(3):
-    sum.append(0)
-for j in range(len(nums)):
-    sum[nums[j]]+=1
-for k in range(3):
-    for l in range(sum[k]):
-        temp.append(k)
-print("[{}]".format(",".join(map(repr, temp))))
+class Solution:
+    def sortColors(self, nums: List[int]) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        summ=[0]*3
+        length=0
+        for j in range(len(nums)):
+            summ[nums[j]]+=1
+        for k in range(3):
+            tempk=summ[k]
+            for l in range(length,length+summ[k]):
+                #temp.append(k)
+                nums[l]=k
+            length+=tempk
+        return nums
