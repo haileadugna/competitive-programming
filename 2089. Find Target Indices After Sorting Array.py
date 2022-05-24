@@ -5,5 +5,6 @@ output=[]
 for i in range(len(nums)):
     if nums[i]==target:
         output.append(i)
-
+else:
+    print(output)
 print(output)
