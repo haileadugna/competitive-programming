@@ -2,7 +2,6 @@ class Solution:
     def isValid(self, s: str) -> bool:
         dict1={'}':'{',']':'[',')':'('}
         list1 =list(s)
-        print(list1)
         stack = [list1[0]]
         if list1[0] in dict1:
                 return False
