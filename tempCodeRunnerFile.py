@@ -28,16 +28,33 @@
 # s1= student(2,7)
 # print(s1.sum(5,9))
 
-arr = [1,1,3,4,2,4,-1,-4,-2,1,0]
-a  = min(arr)
-summ=[0]*(max(arr) + 1- a)
+# arr = [1,1,3,4,2,4,-1,-4,-2,1,0]
+# a  = min(arr)
+# summ=[0]*(max(arr) + 1- a)
 
-for j in range(len(arr)):
-    summ[arr[j]- a]+=1
+# for j in range(len(arr)):
+#     summ[arr[j]- a]+=1
 
-temp = []
-for i in range(len(summ)):
-    for k in range(summ[i]):
-        temp.append(i + a)
+# temp = []
+# for i in range(len(summ)):
+#     for k in range(summ[i]):
+#         temp.append(i + a)
        
-print(temp)
+# print(temp)
+
+arr =  [4, 1, 3, 9, 7]
+n = len(arr)
+summ = []
+for i in range(n-1):
+    temp = i
+    for k in range(i+1, n):
+        if arr[temp] > arr[k]:
+            temp = k
+    if i != temp:
+        a= arr[i]
+        arr[i]=arr[temp]
+        arr[temp] = a
+print(arr)
+
+
+    
