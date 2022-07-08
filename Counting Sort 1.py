@@ -15,9 +15,7 @@ import sys
 
 def countingSort(arr):
     # Write your code here
-    sum=[]
-    for i in range(100):
-        sum.append(0)
+    sum=[0]*100
     for j in range(len(arr)):
         sum[arr[j]]+=1
     return sum

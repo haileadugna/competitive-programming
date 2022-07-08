@@ -1,17 +1,20 @@
-nums=[1,2,3,4,5]
-start=len(nums)//2
-end=len(nums)/2
-if end==start:
-    print(nums[end:])
-elif end!=start:
-    print(nums)
-
-# while start<end:
-#     if start<end:
-#         start+=1
-#         end-=1
-#     elif start==end:
-#         nums[start:]
-#     elif start+1==end:
-#         nums[end:]
-# print(nums)
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def middleNode(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        temp = []
+        while head is not None:
+            temp.append(head.val)
+            head = head.next
+        n = len(temp)
+        m = n//2
+        nums = temp[m:]
+        head = ListNode(nums[0])
+        temp2 = head
+        for i in range(1, len(nums)):
+            head.next = ListNode(nums[i])
+            head = head.next                      
+        return temp2 
