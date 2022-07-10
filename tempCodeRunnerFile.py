@@ -42,9 +42,43 @@
        
 # print(temp)
 
-arr =  [4, 1, 3, 9, 7]
-n = len(arr)
-summ = []
+# arr =  [4, 1, 3, 9, 7]
+# n = len(arr)
+# summ = []
+# for i in range(n-1):
+#     temp = i
+#     for k in range(i+1, n):
+#         if arr[temp] > arr[k]:
+#             temp = k
+#     if i != temp:
+#         a= arr[i]
+#         arr[i]=arr[temp]
+#         arr[temp] = a
+# print(arr)
+# arr = [1,2,3,4,5,6,7,4]
+# n = len(arr)
+# e= arr[-1]
+
+# for i in range(n-2,-1,-1):
+#     if arr[i]<e:
+#         arr[i+1]= e
+#         temp=list(map(str,arr))
+#         out=' '.join(temp)
+#         print(out)
+#         break
+#     else:
+#         arr[i+1]=arr[i]
+#         temp=list(map(str,arr))
+#         out=' '.join(temp)
+#         print(out)
+# else:
+#     arr[0]=e
+#     temp=list(map(str,arr))
+#     out=' '.join(temp)
+#     print(out)
+
+arr = [5,3,2,4,6,3,4]
+n= len(arr)
 for i in range(n-1):
     temp = i
     for k in range(i+1, n):
@@ -54,7 +88,4 @@ for i in range(n-1):
         a= arr[i]
         arr[i]=arr[temp]
         arr[temp] = a
-print(arr)
-
-
-    
+    print(arr)
