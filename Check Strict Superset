@@ -1,0 +1,14 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+superset = set(input().split(" "))
+m = len(superset)
+n = int(input())
+ans = True
+for i in range(n):
+    nums = set(input().split(" "))
+    if superset.issuperset(nums) and m > len(nums):
+        ans = True
+    else:
+        ans = False
+        break
+print(ans)
