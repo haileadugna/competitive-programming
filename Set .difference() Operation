@@ -1,0 +1,7 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+n = input()
+english = set(input().split())
+m = input()
+french = set(input().split())
+onlyenglish = english.difference(french)
+print(len(onlyenglish))
