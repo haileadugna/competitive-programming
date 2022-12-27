@@ -1,0 +1,20 @@
+
+from collections import defaultdict
+
+n,m = input().split()
+
+dicA = defaultdict(list)
+
+for i in range(int(n)):
+    dicA[input()].append(i+1)
+    
+dicb = []
+
+for i in range(int(m)):
+    dicb.append(input())
+    
+for char in dicb:
+    if char in dicA:
+        print(*dicA[char])
+    else:
+        print(-1)
