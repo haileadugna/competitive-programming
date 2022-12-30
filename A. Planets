@@ -1,0 +1,20 @@
+from collections import Counter
+n  = input()
+
+for j in range(int(n)):
+    temp = input().split(" ")
+    n = temp[0]
+    c = temp[1]
+    arr = input().split(" ")
+    arrdict = Counter(arr)
+    res = 0
+    setarr = set(arr)
+    for num in setarr:
+        if arrdict[num] < int(c):
+            res += arrdict[num]
+        else:
+            res += int(c)
+    print(res)
+    
+        
+    
