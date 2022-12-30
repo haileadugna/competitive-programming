@@ -1,0 +1,46 @@
+from collections import Counter
+n  = input()
+
+for j in range(int(n)):
+    temp = input().split(" ")
+    shirt1 = temp[0]
+    shirt2 = temp[1]
+    len1 = len(shirt1) -1
+    len2 = len(shirt2) -1
+    if shirt1[len1] > shirt2[len2]:
+        print("<")
+    elif shirt1[len1] < shirt2[len2]:
+        print(">")
+    else:
+        
+        if shirt1[len1] == "S":
+            i,j = len1, len2
+            while i > 0 and j >0:
+                i -= 1
+                j -= 1
+            if j != 0:
+                print(">")
+            elif j == 0 and i == 0:
+                print("=")
+            else:
+                print("<")
+        else:
+            i,j = len1, len2
+            while i > 0 and j >0:
+                i -= 1
+                j -= 1
+            if j != 0:
+                print("<")
+            elif j == 0 and i == 0:
+                print("=")
+            else:
+                print(">")
+                
+                
+            
+            
+                
+        
+    
+        
+    
