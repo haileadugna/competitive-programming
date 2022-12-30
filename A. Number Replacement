@@ -1,0 +1,19 @@
+n  = input()
+
+for j in range(int(n)):
+    lenarr = input()
+    arr = input().split(" ")
+    string = input()
+    dictt = {}
+    ans = "YES"
+    for i in range(int(lenarr)):
+        if arr[i] in dictt:
+            if dictt[arr[i]] != string[i]:
+                ans = "NO"
+                break
+        else:
+            dictt[arr[i]] = string[i]
+    print(ans)
+    
+        
+    
