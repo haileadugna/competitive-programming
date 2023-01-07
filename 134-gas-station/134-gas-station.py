@@ -11,6 +11,6 @@ class Solution:
             if total < 0:
                 total = 0
                 res = i + 1
-                print(res)
+
                 
         return res
