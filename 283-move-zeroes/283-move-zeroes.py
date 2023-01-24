@@ -8,10 +8,9 @@ class Solution:
 
         while read < len(nums):
             if nums[read] != 0:
-                temp = nums[read]
-                nums[read] = nums[write]
-                nums[write] = temp
 
-                write =  write + 1
+                nums[read], nums[write] = nums[write], nums[read]
+
+                write += 1
 
             read = read + 1
