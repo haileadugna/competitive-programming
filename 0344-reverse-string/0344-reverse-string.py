@@ -3,10 +3,12 @@ class Solution:
         """
         Do not return anything, modify s in-place instead.
         """
-        start, end = 0, len(s)-1
-        while start <= end:
-            temp = s[start]
-            s[start] = s[end]
-            s[end] = temp
-            start += 1
-            end -= 1
+        def reverses(s, left, right):
+            if left >= right:
+                return s
+            else:
+                s[left] , s[right] = s[right], s[left]
+                return reverses(s, left + 1, right -1)
+            
+        return reverses(s, 0, len(s) -1)
+        
