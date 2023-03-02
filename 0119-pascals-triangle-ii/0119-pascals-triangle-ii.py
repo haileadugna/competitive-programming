@@ -1,19 +1,19 @@
 class Solution:
     def getRow(self, rowIndex: int) -> List[int]:
         
-        new_list=[1,1]
-        old_list=[1]
-        if rowIndex==0:
-            return old_list
-        if rowIndex==1:
-            return new_list
-        for i in range(2,rowIndex+1):
-            old_list = new_list
-            new_list=[1]
-            for j in range(1,i):
-                new_list.append(old_list[j-1]+old_list[j])
-            new_list.append(1)
-        return new_list
+        if rowIndex == 0:
+            return [1]
+        if rowIndex == 1:
+            return [1, 1]
+        
+        prev_row = self.getRow(rowIndex - 1)
+        
+        new_row = [1]
+        for i in range(1, rowIndex):
+            new_row.append(prev_row[i - 1] + prev_row[i])
+        new_row.append(1)
+        
+        return new_row
         
         
         
