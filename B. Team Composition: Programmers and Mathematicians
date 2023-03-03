@@ -1,0 +1,11 @@
+n = int(input())
+for _ in range(n):
+    a, b = map(int, input().split())
+    
+    temp = (a + b)//4
+    if min(a, b) >= temp:
+        res = temp
+    else:
+        res = min(a, b)
+        
+    print(res)
