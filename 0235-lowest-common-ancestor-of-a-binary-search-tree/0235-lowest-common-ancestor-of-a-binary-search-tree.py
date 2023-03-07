@@ -15,9 +15,20 @@ class Solution:
         elif root.val == q.val:
             return q
         
-        elif root.val > min(p.val, q.val) and root.val < max(p.val, q.val):
+        # elif root.val > min(p.val, q.val) and root.val < max(p.val, q.val):
+        #     return root
+        left = self.lowestCommonAncestor(root.left, p, q) 
+        right = self.lowestCommonAncestor(root.right, p, q)
+        
+        if left and right :
             return root
-        return self.lowestCommonAncestor(root.left, p, q) or self.lowestCommonAncestor(root.right, p, q)
+        
+        if left:
+            return left
+        if right:
+            return right
+        return None
+        # return left or right
     
         
         
