@@ -10,11 +10,12 @@ class Solution:
         res = []
         def run(root, k):
             if not root :
-                return 0
+                return 
             run(root.left, k)
             self.ans += 1
             if self.ans == k:
                 res.append(root.val)
+                root.right = None
             run(root.right, k)
         run(root, k)
         return res[0]
