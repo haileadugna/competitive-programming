@@ -7,12 +7,11 @@
 class Solution:
     def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
         self.dictt = {}
-        self.vertical(root, 0, 0)
-        # print(self.dictt)
+        self.vertical(root, 0)
      
         return self.dictt.values()
 
-    def vertical(self, node, x, y):
+    def vertical(self, node, x):
         # If the node is None, return
         if not node:
             return 1
@@ -22,5 +21,5 @@ class Solution:
         else:
             self.dictt[x] = [node.val]
  
-        self.vertical(node.left, x + 1, y - 1)
-        self.vertical(node.right, x + 1, y + 1)
+        self.vertical(node.left, x + 1)
+        self.vertical(node.right, x + 1)
