@@ -8,6 +8,7 @@ class Solution:
         res = len(nums) + 1
         for i in range(1, len(nums)):
             nums[i] += nums[i - 1]
+            
             if nums[i] < 0:
                 nums[i] = 0
         nums = nums[1:]
