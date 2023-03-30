@@ -5,9 +5,10 @@ class Solution:
         for i in range(n + 1):
             cnt = 0
             for j in range(17):
-                if (i >> j) & 1:
-                    cnt += 1
-                    
-            res[i] = cnt
                 
+                if (i >> j) & 1:
+                    
+                    cnt += 1
+              
+            res[i] = cnt
         return res
