@@ -1,6 +1,7 @@
 class Solution:
     def hammingDistance(self, x: int, y: int) -> int:
 
+        print((5 >> 0 & 0) == 0)
 
         cnt = 0
         for j in range(32):
