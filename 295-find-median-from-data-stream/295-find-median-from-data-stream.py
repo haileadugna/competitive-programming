@@ -38,7 +38,7 @@ class MedianFinder:
     def findMedian(self) -> float:
         # if self.add == 3:
         #     return self.nums[1]
-        if (len(self.heap_add) + len(self.heap_removed)) % 2 == 1:
+        if (self.add + self.remove) % 2 == 1:
             return self.heap_add[0]
         # if self.heap_removed and self.heap_add:
         return ( -self.heap_removed[0] + self.heap_add[0])/2
