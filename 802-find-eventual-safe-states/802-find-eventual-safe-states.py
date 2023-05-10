@@ -45,6 +45,6 @@ class Solution:
             if not found:
                 stack.append(node)
      
-        return sorted(stack)
+        return stack
                 
             
