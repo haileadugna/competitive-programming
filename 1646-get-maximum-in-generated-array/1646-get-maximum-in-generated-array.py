@@ -1,7 +1,7 @@
 class Solution:
     def getMaximumGenerated(self, n: int) -> int:
         
-        # @cache
+        @cache
         def getMaximum(n):
         
             if n <= 0:
