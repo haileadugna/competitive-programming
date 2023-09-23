@@ -18,7 +18,7 @@ class Solution:
                 else:
                     dp[i][j] = min(0, max(dp[i][j+1], dp[i+1][j]) + dungeon[i][j])
                     
-        print(dp)
+        # print(dp)
                     
         return abs(dp[0][0]) + 1
                 
