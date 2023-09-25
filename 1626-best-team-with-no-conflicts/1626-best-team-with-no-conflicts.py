@@ -7,7 +7,7 @@ class Solution:
             
         nums.sort()
         
-        print(nums)
+        # print(nums)
         dp = defaultdict(int)
         res = 0
         for i in range(len(nums)-1, -1,-1):
