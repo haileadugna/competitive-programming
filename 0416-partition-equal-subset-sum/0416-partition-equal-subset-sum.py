@@ -9,11 +9,12 @@ class Solution:
         target = sum(nums)//2
         
         for i in range(len(nums) -2, -1, -1):
-            
+            # print(set_nums)
             temp = set()
             for t in set_nums:
                 temp.add(t + nums[i])
                 temp.add(t)
+                # print('here', temp)
                 
             set_nums = temp
             
