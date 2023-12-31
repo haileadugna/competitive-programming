@@ -1,16 +1,13 @@
 class Solution:
     def maxLengthBetweenEqualCharacters(self, s: str) -> int:
-        
-        dictt = defaultdict(list)
+        res = -1
+        dictt = {}
         
         for i in range(len(s)):
-            dictt[s[i]].append(i)
-            
-        res = -1
-        for w in dictt.keys():
-            if len(dictt[w]) == 1:
-                continue
+            if s[i] not in dictt:
+                dictt[s[i]] = i
+                
             else:
-                res = max(res, dictt[w][-1] - dictt[w][0] -1)
+                res = max(res, i - dictt[s[i]] -1)
                 
         return res
