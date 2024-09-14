@@ -1,2 +1,2 @@
-# A2SV
+# Competitive Programming
 This is the repository for competitive programming solutions
